@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="208.715">
+<testcase classname="register with valid data" name="user put his valid data" time="30.495">
+<system-out><![CDATA[Given user open register page...............................................passed
+And user chose his gender...................................................passed
+And user put his first and last name........................................passed
+And user put his birthday data..............................................passed
+And user put his email"aliaa@gmial.com".....................................passed
+And user put his Company name...............................................passed
+And user put his password"1234567"..........................................passed
+And user put his Confirm password...........................................passed
+When user enter register....................................................passed
+Then success massage will appear............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login" name="guest user could Login with valid credentials" time="16.033">
+<system-out><![CDATA[Given user open login page..................................................passed
+And user put his email"aliaa@gmial.com".....................................passed
+And user put his password"1234567"..........................................passed
+When user enter login.......................................................passed
+Then user can see my account display........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could switch between currencies" name="guest user could switch between currencies" time="14.996">
+<system-out><![CDATA[Given Select “Euro” from currency dropdown..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can hover and select from different category" name="user can hover and select from different category" time="52.384">
+<system-out><![CDATA[Given user chose any category...............................................passed
+And select a product........................................................passed
+And user chose anther category..............................................passed
+And user chose anther product...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for any product" name="user could search for any product" time="18.696">
+<system-out><![CDATA[Given user writ any product in search.......................................passed
+When user click search button...............................................passed
+Then user go to page1.......................................................passed
+And user can search for product by using SKU................................passed
+When user click search button2..............................................passed
+Then user go to page........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could click in slider wrapper" name="verify that guest user could click in slider wrapper" time="13.152">
+<failure message="The following asserts failed:&#10;&#9;nokia expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click in slider wrapper1..........................................passed
+Then nokia page open........................................................failed
+When user click in slider wrapper2..........................................skipped
+Then iphone page open.......................................................skipped
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	nokia expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at definition.sc6_definition.page_open(sc6_definition.java:21)
+	at ✽.nokia page open(file:///C:/Users/Habiba/IdeaProjects/maven/src/main/resources/Features/sc6.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="confirm&quot;follow us&quot; links open" name="confirm&quot;follow us&quot; links open the corresponding websites" time="18.579">
+<system-out><![CDATA[Given user go to follow us and click in facebook icon.......................passed
+And user will go to page in facebook........................................passed
+And user go to follow us and click in twitter icon..........................passed
+Then user will go to page in twitter........................................passed
+When user go to follow us and click in youtube icon.........................passed
+Then user will go to page in youtube........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add in wish list" name="user can add product in wish list" time="36.211">
+<system-out><![CDATA[Given user select product by category.......................................passed
+When click on product to add to wish list...................................passed
+Then Success massage will show..............................................passed
+And user click on product2 wish icon........................................passed
+When click on product2 to add to wish list..................................passed
+Then Success2 massage will show.............................................passed
+Then wish list table will show..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user add product" name="user add product to cart" time="7.481">
+<failure message="unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=101.0.4951.67)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: '011NO', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [92572c82a48ddfe295c25dcddfea0af0, get {url=https://demo.nopcommerce.com/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Habiba\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49487/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 92572c82a48ddfe295c25dcddfea0af0" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user chose product that he want.......................................skipped
+When add to cart............................................................skipped
+Then success massage will show..............................................skipped
+And add product by category.................................................skipped
+And chose  product..........................................................skipped
+When add product............................................................skipped
+Then success  will show.....................................................skipped
+Then table of shop cart will show...........................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=101.0.4951.67)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: '011NO', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [92572c82a48ddfe295c25dcddfea0af0, get {url=https://demo.nopcommerce.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Habiba\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49487/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 92572c82a48ddfe295c25dcddfea0af0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1022)
+	at definition.Hooks.open_Browser(Hooks.java:23)
+]]></failure>
+</testcase>
+</testsuite>

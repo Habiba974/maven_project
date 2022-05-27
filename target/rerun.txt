@@ -1,0 +1,2 @@
+file:src/main/resources/Features/sc6.feature:3
+file:src/main/resources/Features/sc9.feature:3
